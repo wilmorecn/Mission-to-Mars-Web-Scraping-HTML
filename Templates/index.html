@@ -47,8 +47,8 @@
       <div class="card bg-dark text-white">
         <h2 class="card-header font-weight-bold">Latest Martian News</h2>
         <div class=" card-body" style="border-top-style: solid; border-top-color: #020B0B">
-          <h4 class="card-title">{{ data.News_Title }}</h4>
-          <p class="card-text lead">{{ data.News_Summary }}</p>
+          <h4 class="card-title">{{ complete_mars_dict.News_Title }}</h4>
+          <p class="card-text lead">{{ complete_mars_dict.News_Summary }}</p>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
     <div class=" card bg-dark text-white">
       <h2 class=" card-header font-weight-bold">Featured Mars Image</h2>
       <div class="card-body" style="border-top-style: solid; border-top-color: #020B0B">
-        <img src= "{{data.Featured_Image}}" class="img-fluid">
+        <img src= "{{complete_mars_dict.Featured_Image}}" class="img-fluid">
       </div>
     </div>
   </div>
@@ -68,13 +68,13 @@
     <div class="card bg-dark text-white">
       <h2 class="card-header font-weight-bold">Current Weather on Mars</h2>
       <div class="card-body" style="border-top-style: solid; border-top-color: #020C0C">
-        <p class="card-text lead">{{ data.Weather_Tweet }}</p>
+        <p class="card-text lead">{{ complete_mars_dict.Weather_Tweet }}</p>
       </div>
     </div>
     <div class="card bg-dark text-white mt-5">
       <h2 class="card-header font-weight-bold">Mars Facts & Figures</h2>
       <div class="card-body" style="border-top-style: solid; border-top-color: #020C0C">
-         {{data.Facts|safe}}
+         {{complete_mars_dict.Facts_Tables}}
 
       </div>
     </div>
@@ -84,14 +84,13 @@
   <div class="row mt-3 container-fluid m-5 p-auto" style="width: 90%;">
     <div class=" container-fluid col-md-12">
     <h2 class="card-header bg-dark text-white text-center mb-1"
-      style="width: 98.05%; margin-left: 10px; border-bottom-style: solid; border-bottom-color: #031A19">Hemispheres
-      of
-      Mars</h2>
-    {% for dict in data.Hemisphere_Image_urls %} <div class="container-fluid col-md-6">
+      style="width: 98.05%; margin-left: 10px; border-bottom-style: solid; border-bottom-color: #031A19">
+      Hemispheres of Mars</h2>
+    {% for dict in complete_mars_dict.Hemisphere_Image_urls %} <div class="container-fluid col-md-6">
       <div class="card bg-dark text-white">
         <div class="card-body p-1" style="border-bottom-style: solid; border-bottom-color: #031A19">
-          <img src={{ dict.img_url }} class="img-fluid">
-          <h4 class="card-title text-center mt-3 p-1 font-weight-bold">{{ dict.title1 }}</h4>
+          <img src={{ complete_mars_dict.img_url }} class="img-fluid">
+          <h4 class="card-title text-center mt-3 p-1 font-weight-bold">{{ complete_mars_dict.title }}</h4>
         </div>
       </div>
     </div>
