@@ -171,4 +171,4 @@ def scrape():
         "Hemisphere_Image_urls": hemisphere_image_urls
     }
 
-return complete_mars_dict
+    return complete_mars_dict
